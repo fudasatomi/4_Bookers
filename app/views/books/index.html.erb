@@ -13,8 +13,9 @@
 		<td><%= book.title %></td>
 		<td><%= book.body %></td>
 		<td><%= link_to 'Show', book_path(book) %></td>
-		<td>編集</td>
-		<td>削除</td>
+		<td><%= link_to 'Edit', edit_book_path(book) %></td>
+		<td><%= link_to 'Destroy', book_path(book), method: :delete %></td>
+		<!-- リンクを押下後、注意のポップを出す。OK後、このページに緑の字でBook　Was　successfully～のコメントを出す-->
 	</tr>
 	<% end %>
 
@@ -27,6 +28,7 @@
 
 <h5>Body</h5>
 <%= f.text_area :body %>
-
+<!-- フォームやボタンの位置を直す -->
 <%= f.submit 'Create　Book' %>
+<!-- ボタンを押下、Showページに緑の字でBook　Was　successfully～のコメントを出す-->
 <% end %>
