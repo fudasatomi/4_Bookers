@@ -1,4 +1,4 @@
-<h1>Editing Book</h1>
+<h2>Editing Book</h2>
 <!-- フォームやボタンの位置を直す -->
 <%= form_for(@book) do |f| %>
 <h5>Title</h5>
@@ -7,8 +7,8 @@
 <h5>Body</h5>
 <%= f.text_area :body %>
 
-<%= f.submit 'Update Book' %>
+<div><%= f.submit 'Update Book' %></div>
 <!-- リンクを押下後、Showページに緑の字でBook　Was　successfully～のコメントを出す-->
 <% end %>
 
-<p><%= link_to 'Show', book_path(@book) %> | <%= link_to 'Back', books_path %></p>
+<h6><%= link_to 'Show', book_path(@book),:style =>"color:black" %> | <%= link_to 'Back', books_path,:style =>"color:black" %></h6>

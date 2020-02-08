@@ -1,4 +1,5 @@
-<h1>Books</h1>
+<div class="index">
+<h2>Books</h2>
 <!-- 表には内容をeachで繰り返しで表示させる -->
 <table class="books">
 	<tr>
@@ -12,34 +13,27 @@
 	<tr>
 		<td><%= book.title %></td>
 		<td><%= book.body %></td>
-		<td><%= link_to 'Show', book_path(book) %></td>
-		<td><%= link_to 'Edit', edit_book_path(book) %></td>
-		<td><%= link_to 'Destroy', book_path(book), method: :delete %></td>
+		<td align="center"><%= link_to 'Show', book_path(book),:style =>"color:black" %></td>
+		<td align="center"><%= link_to 'Edit', edit_book_path(book),:style =>"color:black"  %></td>
+		<td align="center"><%= link_to 'Destroy', book_path(book),:style =>"color:black", method: :delete %></td>
 		<!-- リンクを押下後、注意のポップを出す。OK後、このページに緑の字でBook　Was　successfully～のコメントを出す-->
 	</tr>
 	<% end %>
 
 </table>
 
-<h2>New book</h2>
+<h3>New book</h3>
 <%= form_for(@book) do |f| %>
-
-<% if @book.errors.any? %>
-	<ul>
-	<% @book.errors.full_messages.each do |message| %>
-		<li><%= message %></li>
-	</ul>
-	<% end %>
-<% end %>
 
 <h5>Title</h5>
 <%= f.text_field :title %>
 
 <h5>Body</h5>
 <%= f.text_area :body %>
-<!-- フォームやボタンの位置を直す -->
-<%= f.submit 'Create　Book' %>
+<div><%= f.submit 'Create　Book' %></div>
 <!-- ボタンを押下、Showページに緑の字でBook　Was　successfully～のコメントを出す-->
 <% end %>
 
+
 <p><%= link_to 'Topページへ', root_path %></p>
+</div>
