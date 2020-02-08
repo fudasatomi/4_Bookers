@@ -1,6 +1,10 @@
+<% if flash[:notice] %>
+<%= notice %>
+<% end %>
+
 <div class="index">
 <h2>Books</h2>
-<!-- 表には内容をeachで繰り返しで表示させる -->
+
 <table class="books">
 	<tr>
 		<th class="th-title">Title</th>
@@ -15,8 +19,8 @@
 		<td><%= book.body %></td>
 		<td align="center"><%= link_to 'Show', book_path(book),:style =>"color:black" %></td>
 		<td align="center"><%= link_to 'Edit', edit_book_path(book),:style =>"color:black"  %></td>
-		<td align="center"><%= link_to 'Destroy', book_path(book),:style =>"color:black", method: :delete %></td>
-		<!-- リンクを押下後、注意のポップを出す。OK後、このページに緑の字でBook　Was　successfully～のコメントを出す-->
+		<td align="center"><%= link_to 'Destroy', book_path(book),:style =>"color:black", method: :delete,data: {confirm: "Are you sure?"} %></td>
+
 	</tr>
 	<% end %>
 
@@ -31,7 +35,7 @@
 <h5>Body</h5>
 <%= f.text_area :body %>
 <div><%= f.submit 'Create　Book' %></div>
-<!-- ボタンを押下、Showページに緑の字でBook　Was　successfully～のコメントを出す-->
+
 <% end %>
 
 
