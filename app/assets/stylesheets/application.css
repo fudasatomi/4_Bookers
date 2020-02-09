@@ -21,11 +21,11 @@ body{
 h2{
 	margin:20px 0;
 }
-h3{
-	margin: 15px 0;
+h4{
+	margin: 0;
 }
 h5{
-	margin: 3px 0;
+	margin: 15px 0 0;
 }
 p{
 	margin: 30px 50px;
@@ -42,19 +42,27 @@ strong{
 }
 table{
 	font-size: 13px;
+	width: 100%;
 }
 .th-title{
-	width: 150px;
+	width: 15%;
 }
 .th-body{
-	width: 400px;
+	width: auto;
 }
 .th-link{
-	width: 50px;
+	width: 45px;
 }
 td{
 	padding: 3px;
 }
+.td-link{
+	text-align: center;
+	font-weight: bold;
+}
 .form{
 	margin: 0;
+}
+.submit{
+	margin: 10px 0;
 }

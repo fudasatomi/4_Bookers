@@ -5,7 +5,7 @@
 <!-- サクセスメッセージ -->
 
 <div class="index">
-<h2>Books</h2>
+<h1>Books</h1>
 
 <table class="books">
 	<tr>
@@ -19,16 +19,16 @@
 	<tr>
 		<td><%= book.title %></td>
 		<td><%= book.body %></td>
-		<td align="center"><%= link_to 'Show', book_path(book),:style =>"color:black" %></td>
-		<td align="center"><%= link_to 'Edit', edit_book_path(book),:style =>"color:black"  %></td>
-		<td align="center"><%= link_to 'Destroy', book_path(book),:style =>"color:black", method: :delete,data: {confirm: "Are you sure?"} %></td>
+		<td class="td-link"><%= link_to 'Show', book_path(book),:style =>"color:black" %></td>
+		<td class="td-link"><%= link_to 'Edit', edit_book_path(book),:style =>"color:black"  %></td>
+		<td class="td-link"><%= link_to 'Destroy', book_path(book),:style =>"color:black", method: :delete,data: {confirm: "Are you sure?"} %></td>
 
 	</tr>
 	<% end %>
 
 </table>
 
-<h3>New book</h3>
+<h2>New book</h2>
 <!-- エラーメッセージを表示 -->
 <% if @book.errors.any? %>
 <div id="error_explanation">
@@ -48,10 +48,6 @@
 
 <h5>Body</h5>
 <%= f.text_area :body %>
-<div><%= f.submit 'Create Book' %></div>
+<div class="submit"><%= f.submit 'Create Book' %></div>
 
 <% end %>
-
-
-<p><%= link_to 'Topページへ', root_path %></p>
-</div>
