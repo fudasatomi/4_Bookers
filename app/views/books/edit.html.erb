@@ -1,4 +1,4 @@
-<!-- サクセスメッセージの表示 -->
+<!-- サクセスメッセージ -->
 <% if flash[:notice] %>
 <span class="message"><%= notice %></span>
 <% end %>
@@ -6,7 +6,7 @@
 
 <h1>Editing Book</h1>
 
-<!-- エラーメッセージを表示 -->
+<!-- エラーメッセージ -->
 <% if @book.errors.any? %>
 <div id="error_explanation">
 	<h4><%= @book.errors.count %>件のエラーがあります。</h4>
