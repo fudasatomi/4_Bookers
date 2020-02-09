@@ -34,8 +34,8 @@
 <div id="error_explanation">
 	<h4><%= @book.errors.count %>件のエラーがあります。</h4>
 	　<ul>
-		<% @book.errors.full_messages.each do |massage| %>
-		<li><%= massage %></li>
+		<% @book.errors.full_messages.each do |message| %>
+		<li><%= message %></li>
 		<% end %>
 	</ul>
 </div>
