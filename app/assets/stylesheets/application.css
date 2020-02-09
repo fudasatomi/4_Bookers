@@ -31,6 +31,10 @@ p{
 	margin: 30px 50px;
 	font-size: 13px;
 }
+.message{
+	font-size: 15px;
+	color: green;
+}
 a{
 	margin: 0;
 }
