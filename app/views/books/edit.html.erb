@@ -1,0 +1,33 @@
+<!-- サクセスメッセージ -->
+<% if flash[:notice] %>
+<span class="message"><%= notice %></span>
+<% end %>
+<!-- サクセスメッセージ -->
+
+<h1>Editing Book</h1>
+
+<!-- エラーメッセージ -->
+<% if @book.errors.any? %>
+<div id="error_explanation">
+	<h4><%= @book.errors.count %>件のエラーがあります。</h4>
+	　<ul>
+		<% @book.errors.full_messages.each do |massage| %>
+		<li><%= massage %></li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+<!-- エラーメッセージ -->
+
+<%= form_for(@book) do |f| %>
+<h5>Title</h5>
+<%= f.text_field :title %>
+
+<h5>Body</h5>
+<%= f.text_area :body %>
+
+<div class="submit"><%= f.submit 'Update Book' %></div>
+
+<% end %>
+
+<h5><%= link_to 'Show', book_path(@book),:style =>"color:black" %> | <%= link_to 'Back', books_path,:style =>"color:black" %></h5>
